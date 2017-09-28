@@ -10,7 +10,7 @@ import java.util.List;
 
 public class HeaderHandlerResolver implements HandlerResolver {
 
-    AccessToken token;
+    private AccessToken token;
 
     public HeaderHandlerResolver(AccessToken token) {
         this.token = token;
@@ -18,8 +18,8 @@ public class HeaderHandlerResolver implements HandlerResolver {
 
     public List<Handler> getHandlerChain(PortInfo portInfo) {
         List<Handler> handlerChain = new ArrayList<>();
-        HeaderHandler hh = new HeaderHandler(token);
-        handlerChain.add(hh);
+        HeaderHandler headerHandler = new HeaderHandler(token);
+        handlerChain.add(headerHandler);
         return handlerChain;
     }
 }
