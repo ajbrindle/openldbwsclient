@@ -6,6 +6,6 @@ To set token value, either edit ServiceCalls.java and replace YOUR_TOKEN_VALUE w
 
 Usage:
 
-build: mvn clean compiile
+build: mvn clean compile
 
 Run (from base directory): java -cp ./target/classes/ com.sk7software.openldbws.ServiceCalls [your-token-value]
